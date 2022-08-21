@@ -3,19 +3,22 @@
 let numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
 for (let i = 0; i < numberOfDrumButtons; i++) {
+
     document.querySelectorAll(".drum")[i].addEventListener("click", () => {
         let buttonInnerHTML = this.innerHTML;
+        console.log("mai aaya hu yayahahahha")
         makeSound(buttonInnerHTML);
         buttonAnimation(buttonInnerHTML);
     });
 
 }
 
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
     makeSound(event.key);
     buttonAnimation(event.key);
 });
 
+// function to make sound
 
 function makeSound(key) {
 
